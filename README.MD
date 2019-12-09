@@ -30,10 +30,10 @@ cd reddit_travel_pics_scraper
     "Are you a developer? Create an app"
     *if you've created one already the button says "create another app"
 4. Fill in the name with anything you want, chose "script" for the type(options should be web app, installed app and script), write a quick description about what you plan to use this for, put "http://localhost:8080" for the redirect uri, leave the about url section blank.
-<img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/screenshots/createapplicationreddit.png" height="400">
+<img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/blob/master/screenshots/createapplicationreddit.png" height="400">
 
 5. Click create app and copy the client id, client secret, script name, username and password as labeled below. replace the values in simple_bot.py with your info
-<img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/screenshots/applicationcomponentsreddit.png" height="400">
+<img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/blob/master/screenshots/applicationcomponentsreddit.png" height="400">
 
 ```
     r = praw.Reddit(username= username,
