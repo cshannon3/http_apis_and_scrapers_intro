@@ -35,14 +35,13 @@ cd reddit_travel_pics_scraper
 5. Click create app and copy the client id, client secret, script name, username and password as labeled below. 
 <img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/blob/master/screenshots/applicationcomponentsreddit.png" height="400">
 
-6. Go to /simplebot.py and relace
+6. Go to /required_info.py and replace the placeholders with your info
 ```
-    r = praw.Reddit(username=Username,
-            password= Password,
-            client_id = Client ID,
-            client_secret = Client Secret,
-            user_agent = User Agent)
-    return r
+reddit_username= "REPLACE WITH USERNAME"
+reddit_password=  "REPLACE_WITH_PASSWORD"
+reddit_client_id = "REPLACE_WITH_CLIENTID"
+reddit_client_secret =  "REPLACE_WITH_CLIENTSECRET"
+reddit_user_agent =  "REPLACE_WITH_USERAGENT"
 ```
 6. Install [Python Reddit API Wrapper(PRAW)](https://praw.readthedocs.io/en/latest/)
 ```
