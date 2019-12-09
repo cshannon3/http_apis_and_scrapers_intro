@@ -14,7 +14,7 @@ To do so I did the following
 
 # SET UP
  
-If you don't have git or python installed go to ... first to set them up(todo)
+For instructions on installing Python and pip see ["The Hitchhiker's Guide to Python" Installation Guides](http://docs.python-guide.org/en/latest/starting/installation/)
 
 
 Clone Repo
@@ -22,10 +22,17 @@ Clone Repo
 git clone https://github.com/cshannon3/reddit_travel_pics_scraper
 cd reddit_travel_pics_scraper
 ```
-
+To install required packages you can run either:
+```
+pip install -r requirements.txt
+```
+or 
+```
+pip install praw imgurpython pymongo
+```
 **REDDIT API**
 1. Create a reddit account at [reddit.com](https://www.reddit.com/)
-2. Log in then go to your[reddit apps page](https://www.reddit.com/prefs/apps/)
+2. Log in then go to your [reddit apps page](https://www.reddit.com/prefs/apps/)
 3. Scroll to the bottom and click and click the buttom that says
     "Are you a developer? Create an app"
     *if you've created one already the button says "create another app"
@@ -43,6 +50,15 @@ reddit_client_id = "REPLACE_WITH_CLIENTID"
 reddit_client_secret =  "REPLACE_WITH_CLIENTSECRET"
 reddit_user_agent =  "REPLACE_WITH_USERAGENT"
 ```
+it should look like this example from [praw's docs](https://praw.readthedocs.io/en/latest/getting_started/authentication.html#oauth) shown below:
+```
+client_id="SI8pN3DSbt0zor",
+client_secret="xaxkj7HNh8kwg8e5t4m6KvSrbTI",
+password="1guiwevlfo00esyy",
+user_agent="testscript by /u/fakebot3",
+username="fakebot3"
+```
+
 6. Install [Python Reddit API Wrapper(PRAW)](https://praw.readthedocs.io/en/latest/)
 ```
     pip install praw
@@ -52,6 +68,9 @@ You should be good to go for reddit, on to Imgur API
 
 **Imgur API**
 
-
+6. Install the [Python Imgur API Library](https://github.com/Imgur/imgurpython)
+```
+    pip install imgurpython
+```
 
 **Mongo DB**

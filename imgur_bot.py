@@ -1,9 +1,7 @@
 
 
-from auth import authenticate
+
 from datetime import datetime
-    
-    
 from imgurpython import ImgurClient
 try:
     import secret as req_info
