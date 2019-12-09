@@ -32,15 +32,16 @@ cd reddit_travel_pics_scraper
 4. Fill in the name with anything you want, chose "script" for the type(options should be web app, installed app and script), write a quick description about what you plan to use this for, put "http://localhost:8080" for the redirect uri, leave the about url section blank.
 <img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/blob/master/screenshots/createapplicationreddit.png" height="400">
 
-5. Click create app and copy the client id, client secret, script name, username and password as labeled below. replace the values in simple_bot.py with your info
+5. Click create app and copy the client id, client secret, script name, username and password as labeled below. 
 <img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/blob/master/screenshots/applicationcomponentsreddit.png" height="400">
 
+6. Go to /simplebot.py and relace
 ```
-    r = praw.Reddit(username= username,
-            password= pswd,
-            client_id = client_id,
-            client_secret = client_secret,
-            user_agent = script name)
+    r = praw.Reddit(username=Username,
+            password= Password,
+            client_id = Client ID,
+            client_secret = Client Secret,
+            user_agent = User Agent)
     return r
 ```
 6. Install [Python Reddit API Wrapper(PRAW)](https://praw.readthedocs.io/en/latest/)
