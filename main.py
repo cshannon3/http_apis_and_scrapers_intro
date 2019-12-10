@@ -46,7 +46,10 @@ class Manager:
 
 if __name__ == "__main__":
     manager = Manager()
-    manager.activate()# activate apis and databases
+    manager.activate(reddit=True)# activate apis and databases
+    test = manager.redditClient.get_posts_from_subreddit( "travel", count=10, toJson=True, rankType="top")
+    for post in test:
+        print(post)
 
 
     

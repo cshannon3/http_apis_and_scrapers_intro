@@ -2,4 +2,4 @@ praw
 requests
 imgurpython 
 pymongo
-Pyrebase
+pyrebase

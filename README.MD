@@ -1,18 +1,19 @@
 
 # Reddit Photo Scraper
 
-I think this will end up being a multipurpose web-scrapper tool that aggregates a bunch of my previous projects and acts as a guide to getting started in this area. You'd basically just have to specify
+I think this will end up being a multipurpose web-scrapper tool that aggregates a bunch of my previous projects and acts as a guide to getting started in this area. You'd basically just have to specify the source, relavent source info and storage method and this program will do the rest.
 
 
-Data Source Options
-reddit 
+Data Source Options<br/>
+ - reddit 
+<br/>
 
-Data Storage Options
-Firebase
-MongoDB
-Imgur
-Json
-csv 
+Data Storage Options<br/>
+ - Firebase
+ - MongoDB
+ - Imgur
+ - Json
+ - csv 
 
 
 To do so I did the following
@@ -35,9 +36,10 @@ git clone https://github.com/cshannon3/reddit_travel_pics_scraper
 cd reddit_travel_pics_scraper
 ```
 The libraries I use are:
-    -[Python Reddit API Wrapper(praw)](https://praw.readthedocs.io/en/latest/)
-    -[Python Imgur API Library(imgurpython)](https://github.com/Imgur/imgurpython)
-    -[Mongo Python Driver(pymongo)](https://github.com/mongodb/mongo-python-driver)
+
+    [Python Reddit API Wrapper(praw)](https://praw.readthedocs.io/en/latest/)
+    [Python Imgur API Library(imgurpython)](https://github.com/Imgur/imgurpython)
+    [Mongo Python Driver(pymongo)](https://github.com/mongodb/mongo-python-driver)
 
 To install required packages you can run either:
 ```
@@ -45,9 +47,9 @@ pip install -r requirements.txt
 ```
 or 
 ```
-pip install praw imgurpython pymongo Pyrebase
+pip install praw imgurpython pymongo pyrebase
 ```
-**REDDIT API**
+**REDDIT API**<br/>
 [Python Reddit API Wrapper(praw)](https://praw.readthedocs.io/en/latest/)
 1. Create a reddit account at [reddit.com](https://www.reddit.com/)
 2. Log in then go to your [reddit apps page](https://www.reddit.com/prefs/apps/)
@@ -81,14 +83,49 @@ reddit_user_agent="testscript by /u/fakebot3"
 
 
 **Imgur API**
+1. Create an account at [Imgur.com](https://imgur.com/)
+2. Once logged in go to [here](https://api.imgur.com/oauth2/addclient)(should look like below) to create an app in order to get the necessary credentials. Fill in info, chose OAuth2 authorization without a callback url. Your form should end up looking similar to below
+<img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/blob/master/screenshots/imgur_setup/imgur2.png" height="300">
+3. Click submit, copy down the client ID and client Secret from the screen the pops up after you submit(shown below)
+<img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/blob/master/screenshots/imgur_setup/imgur3.png" height="300">
+4. Go to /required_info.py and replace the placeholders with your info
+```
+imgur_account =  "REPLACE_WITH_IMGUR_ACCNT" 
+client_id_imgur="REPLACE_WITH_CLIENT_ID" 
+client_secret_imgur="REPLACE_WITH_CLIENT_SECRET" 
 
+```
+it should look similar to this:
+```
+imgur_account =  "webscraperaccnt" 
+client_id_imgur="8y3940672846c44" 
+client_secret_imgur="98c0945k23dgd192834729572d8se5434200c20"
+```
 
-
-**Mongo DB**
+**Mongo DB**<br/>
 Using [Mongo Python Driver(pymongo)](https://github.com/mongodb/mongo-python-driver)
 1. Follow [this installation guide](https://docs.mongodb.com/manual/installation/#mongodb-community-edition-installation-tutorials) on MongoDB's site to install the MongDB Community Edition Software
 2. Follow [this startup guide](https://docs.mongodb.com/guides/server/install/)
 
 
 **FIREBASE**
+
 Using [Pyrebase](https://github.com/thisbejim/Pyrebase)
+
+
+# Example Uses
+
+
+**Reddit Travel Photos**
+```
+
+
+```
+
+**Reddit Travel Advice**
+```
+
+
+```
+
+
