@@ -62,7 +62,8 @@ pip install praw imgurpython pymongo pyrebase
 5. Click create app and copy the client id, client secret, script name, username and password as labeled below. 
 <img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/blob/master/screenshots/applicationcomponentsreddit.png" height="300">
 
-6. Go to /required_info.py and replace the placeholders with your info
+6. Go to /required_info.py and replace the placeholders with your info<br/>
+
 ```
 reddit_username= "REPLACE WITH USERNAME"
 reddit_password=  "REPLACE_WITH_PASSWORD"
