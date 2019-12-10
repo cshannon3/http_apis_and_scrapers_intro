@@ -19,7 +19,7 @@ class RedditBot:
                 user_agent =  req_info.reddit_user_agent)
         self.authorized=True
 
-    def get_posts_from_subreddit(self, subreddit, count=50, toJson=False, rankType="top", minScore=0):
+    def get_posts_from_subreddit(self, subreddit, count=50, toJson=False, rankType="top", minScore=0, imagesOnly=False):
         submissions = []
         if rankType=="top":
             submissions=self.client.subreddit(subreddit).top(limit=count)
@@ -31,7 +31,7 @@ class RedditBot:
             return submissions
         jsonSubmissions=[]
         for submission in submissions:
-            if(submission.score>minScore):
+            if submission.score>minScore and ((not imagesOnly) or ".jpg" in submission.url ):
                 jsonSubmissions.append({
                     'text': submission.title,
                     'author': submission.author.name,

@@ -12,7 +12,18 @@ imgur_account =  "REPLACE_WITH_IMGUR_ACCNT"
 client_id_imgur="REPLACE_WITH_CLIENT_ID" 
 client_secret_imgur="REPLACE_WITH_CLIENT_SECRET" 
 
-def needToAddInfo(useImgur=False,useMongoDB=False, useRedditAPI=False ):
+
+firebase_storage_url = "REPLACE_WITH_STORAGE_URL" #https://your_storage.firebaseio.com
+firebase_client_secret="REPLACE_WITH_CLIENT_SECRET"
+firebase_user_email = "REPLACE_WITH_EMAIL"
+
+firebase_api_key="REPLACE_WITH_API_KEY" 
+firebase_auth_domain="REPLACE_WITH_AUTH_DOMAIN" 
+firebase_database_url="REPLACE_WITH_DATABASE_URL" 
+firebase_storage_bucket="REPLACE_WITH_STORAGE_BUCKET" 
+            
+
+def needToAddInfo(useImgur=False,useMongoDB=False, useRedditAPI=False, useFirebase=False):
     if(useImgur and not(imgur_account==  "REPLACE_WITH_IMGUR_ACCNT" )):
         return True
     if(useMongoDB and not( mongoDatabaseName == "REPLACE_WITH_DB_NAME")):
