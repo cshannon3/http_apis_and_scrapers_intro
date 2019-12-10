@@ -89,7 +89,8 @@ reddit_user_agent="testscript by /u/fakebot3"
 <img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/blob/master/screenshots/imgur_setup/imgur2.png" height="300">
 3. Click submit, copy down the client ID and client Secret from the screen the pops up after you submit(shown below)
 <img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/blob/master/screenshots/imgur_setup/imgur3.png" height="300">
-4. Go to /required_info.py and replace the placeholders with your info
+4. Go to /required_info.py and replace the placeholders with your info<br/>
+
 ```
 imgur_account =  "REPLACE_WITH_IMGUR_ACCNT" 
 client_id_imgur="REPLACE_WITH_CLIENT_ID" 

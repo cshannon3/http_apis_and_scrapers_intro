@@ -5,10 +5,13 @@ import mongo_user
 
 class Manager:
     def __init__(self):
-        self.imgurClient=None
-        self.redditClient=None
-        self.mongoClient=None
-        self.firebaseClient=None
+        self.imgurClient
+        self.redditClient
+        self.mongoClient
+        self.firebaseClient
+        self.source
+        self.storage
+
         super().__init__()
 
     def mongoDB_to_imgur(self):
