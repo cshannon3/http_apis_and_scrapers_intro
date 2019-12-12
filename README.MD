@@ -1,7 +1,47 @@
 
-# Reddit Photo Scraper
+# Data-Collector-Tool
 
-I think this will end up being a multipurpose web-scrapper tool that aggregates a bunch of my previous projects and acts as a guide to getting started in this area. You'd basically just have to specify the source, relavent source info and storage method and this program will do the rest.
+## Introduction
+**What's the point?**
+By collecting data from different sources, you can use it to create value in millions of ways. It allows you to recreate the data into a way that you like better or to analyze it and find interesting trends or insight in it. 
+
+**Organizing/Presenting Data Better**
+World map where you can click on country or state and see top travel pics from there
+
+
+**Testing a Hypothesis**
+
+**Gaining Insight**
+
+## How To 'Talk' to the Web <br/>
+
+Imagine that you live in a community with a few friends. You can talk freely amongst your friends but if you want to talk to anyone outside of your town you need to send a letter. Say you want to ask your friend from another town to send you the photos she took why you two were on vacation together. You first have to write a letter asking her for the photos you want her to send you. Its important to be clear enough that she knows what you are talking about. You then put the letter into an envelope, add her address and postage stamp then put it into the mail. Once she gets the letter she sends back another letter with the pictures that you requested. If you did this over the internet you would be using a GET function. On the internet, the letter is in the form of an "http request", the address in the form of an Internet Protocol(IP) address, and servers following the Transmission Communication Protocol(TCP)/IP rules are the postal service.  
+
+There are a handful of 'letter types' you can send on the internet. The letter types differ in what is expected from the recieve of the letter. If the recipient is supposed to send you something like the photo example it is a GET letter.
+The next type is called POST. This is like when you register your marriage, company, or car with the state. You tell them you want to get married and they can create a marriage certificate to put on record.
+You can also send PUT and DELETE requests to change the records once they are made on their end.
+
+Every time that you go to a site, you computer makes a request to that site to get all of the information to show you the site. In order for you to see ... sends all info.
+
+**What are APIs**
+If you want to interact with the site without having to go into the site, they can make application-programmer interfaces(APIs) which basically allows you to ask to see or do more specific tasks on the site. Say you run a financial firm and want the most up-to-date stock prices. The newspaper company shares that info in their daily newspaper but you don't want to buy the whole newspaper when all you need is a list of stock prices so to suit your needs they create a service that will allow for you to get just the list of stock prices. Many sites have these sorts of APIs, in this example I use reddit, imgur and firebase. To use reddit as an example, without specific api requests, anytime I send a letter to Reddit's address, they automatically send me all of the info required to recreate reddit's website on my browser. If I wanted to just get the post data, as I do in my examples below, all of the information on how to format the data in the browser is irrelavent. I'd have to make code to find and format the relavent data, which is not very fun(more below on that). Reddit's API provides services like the stock price list such as getting a list of posts from a specific subreddit. 
+
+These APIs are great but just like how you had to be explicit with your friend about what pictures you wanted her to send you, you have to be explicit with the APIs in how you ask for specific services in order for them to provide the services you wanted. The reddit library is like a friend who knows exactly what to say to the reddit api to get the data you want. In this case you can tell him what data you want and he will transcribe the letter in a way that the reddit api understands and send it for you then give you the response once he gets it. 
+
+**What if there is an API but you have no friend to transcribe your letters?**
+Now you'll have to make your own letters(http requests) to send to these sites. 
+
+**What if there isn't an API?**
+You can still get data from sites but now you can't asking for specific information, you'll get all of the info to recreate the site and have to find a way to just get the parts you care about from it. This would be just like if you got the entire paper but just pulled out the stock prices and threw away the rest. The first time you do this you will have to search through the newspaper to find the business section but after that, as long as they don't change it, you can jump immediately to they right section. Beautify Soup is a tool that makes it easier to jump between page and sections as well as finding the specific sections that you care about. This method isn't ideal but since most sites don't have APIs its the only method to get data from much of the web.
+
+
+
+
+<img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/blob/master/screenshots/explanations/rough-draft.png" height="300">
+
+
+
+
 
 
 Data Source Options<br/>
@@ -131,3 +171,4 @@ Using [Pyrebase](https://github.com/thisbejim/Pyrebase)
 ```
 
 
+I think this will end up being a multipurpose web-scrapper tool that aggregates a bunch of my previous projects and acts as a guide to getting started in this area. You'd basically just have to specify the source, relavent source info and storage method and this program will do the rest.
