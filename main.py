@@ -1,10 +1,8 @@
 import sys
-import imgur_bot
-import reddit_bot
-import mongo_user
-import json
+import imgur_bot, reddit_bot, mongo_user
+import json, csv
 from datetime import datetime
-
+import pandas as pd
 
 class Manager:
     def __init__(self):
@@ -36,6 +34,12 @@ class Manager:
         with open('data/{}.json'.format(filename), 'w') as json_file:
             json.dump(reddit_data, json_file)
         pass
+
+    def reddit_to_csv(self, filename, subreddit, depth=1,count=10,rankType="top"):
+        test = self.redditClient.get_posts_from_subreddit( subreddit, count=count, toCSV=True, rankType=rankType)
+        df = pd.DataFrame(test)
+        df.to_csv('data/{}.csv'.format(filename))
+
     
     def reddit_to_Firebase(self):
         pass
@@ -65,10 +69,10 @@ if __name__ == "__main__":
     manager = Manager()
     manager.activate(reddit=True)# activate apis and databases
     #test = manager.redditClient.get_posts_from_subreddit( "travel", count=10, toJson=True, rankType="top")
-    manager.reddit_to_Json("test", "travel",count=10)
+   # manager.reddit_to_Json("test", "travel",count=10)
+    manager.reddit_to_csv("test", "dataisbeautiful",count=15)
 
-    # for post in test:
-    #     print(post)
+
 
 
     

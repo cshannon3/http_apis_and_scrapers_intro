@@ -19,7 +19,7 @@ class RedditBot:
                 user_agent =  req_info.reddit_user_agent)
         self.authorized=True
 
-    def get_posts_from_subreddit(self, subreddit, count=50, toJson=False, rankType="top", minScore=0, imagesOnly=False):
+    def get_posts_from_subreddit(self, subreddit, count=50, toJson=False,toCSV=False, rankType="top", minScore=0, imagesOnly=False):
         submissions = []
         if rankType=="top":
             submissions=self.client.subreddit(subreddit).top(limit=count)
@@ -27,21 +27,40 @@ class RedditBot:
             submissions=self.client.subreddit(subreddit).hot(limit=count)
         else:
             submissions=self.client.subreddit(subreddit).submissions(limit=count)
-        if not toJson:
-            return submissions
-        jsonSubmissions=[]
-        for submission in submissions:
-            if submission.score>minScore and ((not imagesOnly) or ".jpg" in submission.url ):
-                jsonSubmissions.append({
-                    'text': submission.title,
-                    'author': submission.author.name,
-                    'submission_id': submission.id,
-                    'subreddit': submission.subreddit.display_name,
-                    'score': submission.score,
-                    'created_at' : submission.created_utc,
-                    'url': submission.url,
-                })
-        return jsonSubmissions
+        if toJson:
+            jsonSubmissions=[]
+            for submission in submissions:
+                if submission.score>minScore and ((not imagesOnly) or ".jpg" in submission.url ):
+                    jsonSubmissions.append({
+                        'text': submission.title,
+                        'author': submission.author.name,
+                        'submission_id': submission.id,
+                        'subreddit': submission.subreddit.display_name,
+                        'score': submission.score,
+                        'created_at' : submission.created_utc,
+                        'url': submission.url,
+                    })
+            return jsonSubmissions
+        if toCSV:
+            csvSubmissions={'text': [],
+                        'author':[],
+                        'submission_id': [],
+                        'subreddit': [],
+                        'score': [],
+                        'created_at' : [],
+                        'url': []}
+            for submission in submissions:
+                if submission.score>minScore and ((not imagesOnly) or ".jpg" in submission.url ):
+                    csvSubmissions['text'].append(submission.title)
+                    csvSubmissions['author'].append(submission.author.name)
+                    csvSubmissions['submission_id'].append(submission.id)
+                    csvSubmissions['subreddit'].append(submission.subreddit.display_name)
+                    csvSubmissions['score'].append(submission.score)
+                    csvSubmissions['created_at'].append(submission.created_utc)
+                    csvSubmissions['url'].append(submission.url)
+            return csvSubmissions
+            
+        return submissions
     
     
 
