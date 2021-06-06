@@ -1,42 +1,6 @@
 
 # Data-Collector-Tool
 
-## Introduction
-**What's the point?**
-By collecting data from different sources, you can use it to create value in millions of ways. It allows you to recreate the data into a way that you like better or to analyze it and find interesting trends or insight in it. 
-
-**Organizing/Presenting Data Better**
-World map where you can click on country or state and see top travel pics from there
-
-
-**Testing a Hypothesis**
-
-**Gaining Insight**
-
-## How To 'Talk' to the Web <br/>
-
-The web works in a similar way as the mail system. Computers send information back and forth to do all the things we do on the internet.
-
-On the internet, the letter is in the form of an "http request", the address in the form of an Internet Protocol(IP) address, and servers following the Transmission Communication Protocol(TCP)/IP rules are the postal service.  
-<br/>
-There are a handful of 'letter types' you can send on the internet. The letter types differ in what is expected from the recieve of the letter. If the recipient is supposed to send you something like a photo or website content it is a GET letter.
-The next type is called POST. This is like when you register your marriage, company, or car with the state. On a post call, you tell the person on the other side to update some information.
-You can also send PUT and DELETE requests to change the records once they are made on their end.
-<br/>
-Every time that you go to a site, you computer makes a request to that site to get all of the information to show you the site.
-
-**What are APIs**<br/>
-
-If you want to interact with the site without having to go into the site, they can make application-programmer interfaces(APIs) which basically allows you to ask to see or do more specific tasks on the site. Say you run a financial firm and want the most up-to-date stock prices. The newspaper company shares that info in their daily newspaper but you don't want to buy the whole newspaper when all you need is a list of stock prices so to suit your needs they create a service that will allow for you to get just the list of stock prices. Many sites have these sorts of APIs, in this example I use reddit, imgur and firebase. To use reddit as an example, without specific api requests, anytime I send a letter to Reddit's address, they automatically send me all of the info required to recreate reddit's website on my browser. If I wanted to just get the post data, as I do in my examples below, all of the information on how to format the data in the browser is irrelavent. I'd have to make code to find and format the relavent data, which is not very fun(more below on that). Reddit's API provides services like the stock price list such as getting a list of posts from a specific subreddit. 
-<br/>
-These APIs are great but just like how you had to be explicit with your friend about what pictures you wanted her to send you, you have to be explicit with the APIs in how you ask for specific services in order for them to provide the services you wanted. The reddit library is like a friend who knows exactly what to say to the reddit api to get the data you want. In this case you can tell him what data you want and he will transcribe the letter in a way that the reddit api understands and send it for you then give you the response once he gets it. 
-
-**What if there isn't an API?**<br/>
-
-You can still get data from sites but now you can't asking for specific information, you'll get all of the info to recreate the site and have to find a way to just get the parts you care about from it. This would be just like if you got the entire paper but just pulled out the stock prices and threw away the rest. The first time you do this you will have to search through the newspaper to find the business section but after that, as long as they don't change it, you can jump immediately to they right section. Beautify Soup is a tool that makes it easier to jump between page and sections as well as finding the specific sections that you care about. This method isn't ideal but since most sites don't have APIs its the only method to get data from much of the web.
-
-
-
 
 <img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/blob/master/screenshots/explanations/rough-draft.png" height="300">
 
