@@ -1,6 +1,7 @@
 
 # Data-Collector-Tool
 
+This is an example of how a few different APIs can be used to parse and store data in python.
 
 <img align="center" src="https://github.com/cshannon3/reddit_travel_pics_scraper/blob/master/screenshots/explanations/rough-draft.png" height="300">
 
