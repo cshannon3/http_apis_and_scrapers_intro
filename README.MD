@@ -8,8 +8,6 @@ This is an example of how a few different APIs can be used to parse and store da
 
 
 
-
-
 Data Source Options<br/>
  - reddit 
 <br/>
@@ -21,15 +19,6 @@ Data Storage Options<br/>
  - Json
  - csv 
 
-
-To do so I did the following<br/>
-1. Using [Python Reddit API Wrapper(PRAW) library](https://praw.readthedocs.io/en/latest/), I scraped the highly-upvoted photos from the top travel photo subreddits. 
-
-2. I searched the title for a country or state name to specify the locations
-
-3. I saved the photos to a local instance of a mondoDB database
-
-4. I used the  imgur api with the [imgurpython library](https://github.com/Imgur/imgurpython) to post the photos from a specific location into an album on imgur to make the photos easier to view and retreive
 
 # SET UP
  
@@ -125,16 +114,13 @@ Using [Pyrebase](https://github.com/thisbejim/Pyrebase)
 
 
 **Reddit Travel Photos**
-```
+1. Using [Python Reddit API Wrapper(PRAW) library](https://praw.readthedocs.io/en/latest/), I scraped the highly-upvoted photos from the top travel photo subreddits. 
 
+2. I searched the title for a country or state name to specify the locations
 
-```
+3. I saved the photos to a local instance of a mondoDB database
 
-**Reddit Travel Advice**
-```
+4. I used the  imgur api with the [imgurpython library](https://github.com/Imgur/imgurpython) to post the photos from a specific location into an album on imgur to make the photos easier to view and retreive
 
-
-```
-
-
-I think this will end up being a multipurpose web-scrapper tool that aggregates a bunch of my previous projects and acts as a guide to getting started in this area. You'd basically just have to specify the source, relavent source info and storage method and this program will do the rest.
+## Next Steps
+Ideally, this will end up being a multipurpose web-scrapper tool that aggregates a number of projects and acts as a guide to getting started in this area. You'd basically just have to specify the source, relavent source info and storage method and this program will do the rest.
